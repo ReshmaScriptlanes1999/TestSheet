@@ -4,17 +4,9 @@ import { OnlinetestComponent } from './onlinetest.component';
 
 const routes: Routes = [
   {
-  path:'angular', 
+  path:':id', 
   component: OnlinetestComponent
-},
-{
-  path:'node', 
-  component: OnlinetestComponent
-},
-{
-  path:'react', 
-  component: OnlinetestComponent
-},
+}
 ];
 
 @NgModule({
