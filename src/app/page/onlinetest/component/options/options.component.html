@@ -1,1 +1,48 @@
-<p>options works!</p>
+<!-- <li *ngFor="let op of optionv; let index=index;">
+  <input type="radio" #vari (click)="radiobuttonselected(vari.value)" [checked]="op.userSelected "
+    [value]="op.label" required>{{op.label}}
+  </li> -->
+
+  <mat-radio-group aria-label="Select an option" >
+    <mat-radio-button  #vari (click)="radiobuttonselected(vari.value)" *ngFor="let op of optionv; let index=index;" [checked]="op.userSelected" [value]="op.label" >{{op.label}}</mat-radio-button>
+
+  </mat-radio-group>
+
+
+
+
+
+  <!-- <input type="radio" (change)="change(op.label,index)" [checked]="op.userSelected === op.label"
+    [value]="op.label">{{op.label}} -->
+
+
+  <!-- <input type="radio"  (change)="change(op.a,index)" [checked]="op.userSelected === op.a" [value]="op.a">{{op.a}}
+<input type="radio" (change)="change(op.b,index)"  [checked]="op.userSelected === op.b" [value]="op.b">{{op.b}}
+<input type="radio"  (change)="change(op.c,index)" [checked]="op.userSelected === op.c" [value]="op.c">{{op.c}}
+<input type="radio"  (change)="change(op.d,index)" [checked]="op.userSelected === op.d" [value]="op.d">{{op.d}} -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- (change)="change(op.d,index)" [checked]="op.userSelected === op.d"
+        [value]="op.d">{{op.d}} -->
+  <!-- <div *ngFor="let season of seasons; let i = index">
+            <input id="season{{i}}" name="seasons" type="radio"
+              [value]="season" [(ngModel)]="favoriteSeason" />
+            <label for="">{{season}}</label>
+          </div> -->
+
+  <!-- <input type="radio" name="=Option" id="op{{index}}" [value]="Option" [(ngModel)]="favoriteSeason"/>
+
+          <label for="">{{Option}}</label>
+</li>
+        <div>Your favorite season is: {{favoriteSeason}}</div> -->
+

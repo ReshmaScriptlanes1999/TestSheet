@@ -4,20 +4,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScriptlanesheadingComponent } from './component/scriptlanesheading/scriptlanesheading.component';
 import { OnlinetestModule } from './page/onlinetest/onlinetest.module';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [
-    AppComponent,
-    ScriptlanesheadingComponent,
-
-  ],
+  declarations: [AppComponent, ScriptlanesheadingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OnlinetestModule
+    OnlinetestModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

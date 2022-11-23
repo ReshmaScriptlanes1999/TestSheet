@@ -1,1 +1,51 @@
-<p>onlinetest works!</p>
+<div class="main">
+
+    <mat-card>
+      <div *ngFor="let Que of Allquestions; let i=index;">
+        <!-- | paginate: { itemsPerPage: 1, currentPage: page };  let i=index;"> -->
+        <div class="heading">
+          <app-questionheading [headingv]="Que.heading"></app-questionheading>
+        </div>
+        <div class="question">
+          <app-questions [questionv]="Que.question"></app-questions>
+        </div>
+        <div class="option">
+          <app-options [optionv]="Que.Option" (userSelected)="radiobuttonselected($event,i)"
+          ></app-options>{{Que.userSelected}}
+        </div>
+        <br><br>
+      </div>
+    </mat-card>
+
+
+
+
+<div>
+  <div *ngFor="let data of Allrequiredata.table.rows">
+
+
+      {{data|json}}
+  </div>
+  
+</div>
+    <button mat-raised-button color="primary" (click)= "marks1()" type="submit" [disabled]="disable()">Submit</button>
+    <button mat-raised-button color="white" type="cancel" >Cancel</button>
+
+</div>
+
+
+
+<!-- <pagination-controls (pageChange)="handlePageChange($event)" nextLabel="Next">
+</pagination-controls> -->
+
+
+
+<div>
+    <div class="last-content">
+        <div class="margin" style="margin-left:2.5em;" >
+            <b>Total Score : {{total}}<br>
+
+            </b><br><br>
+        </div>
+    </div>
+</div>
